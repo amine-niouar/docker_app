@@ -45,10 +45,18 @@ app.get('/',(req,res) => {
 
 });
 
+app.get('/fan',(req,res) => {
+    redisClient.set('players','players...');    
+    res.send("You little fan of baracelona , you will lose the chalange no za3za3 for u \n");
+
+});
+
 app.get('/data',async (req,res) => {
     const players = await redisClient.get('players');
     res.send(`Welcome to ${players} \n`)
 
 });
+
+
 
 app.listen(PORT,() => console.log("CHANGE HER"));
