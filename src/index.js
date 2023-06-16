@@ -51,6 +51,12 @@ app.get('/fan',(req,res) => {
 
 });
 
+app.get('/cyber_sec',(req,res) => {
+    redisClient.set('players','players...');    
+    res.send("it worked you tacos party guy \n");
+
+});
+
 app.get('/data',async (req,res) => {
     const players = await redisClient.get('players');
     res.send(`Welcome to ${players} \n`)

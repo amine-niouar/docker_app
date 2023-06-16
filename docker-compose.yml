@@ -2,6 +2,7 @@ version: "3"
 services:
   node-app:
     container_name: node-app-container
+    image: aniouar/app-docker
     build: .
     ports:
       - "5000:5000"
